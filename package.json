@@ -4,7 +4,7 @@
   "description": "Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass scss/main.scss css/style.css -w"
+    "compile:sass": "sass scss/main.scss ../css/style.css -w"
   },
   "author": "Accurate A",
   "license": "ISC",
