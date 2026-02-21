@@ -36,7 +36,11 @@ h2 {
   font-optical-sizing: auto;
 }
 
-div.prep-time h3,
+div.prep-time p {
+  font-size: 1.17em;
+}
+
+div.prep-time p,
 div.prep-time ul li::marker {
   color: var(--rose-800);
 }
@@ -119,7 +123,7 @@ table td:last-child {
   div.desktop {
     margin: 5% 0;
     width: 35vw;
-    border-radius: 5px 5px;
+    border-radius: 15px 15px;
     background: var(--rose-50);
   }
 
