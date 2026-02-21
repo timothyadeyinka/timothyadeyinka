@@ -1,6 +1,7 @@
 {
-  "__note": "only use the code below to push new changes to remote-side of repo",
-  "__command": "git config alias.deploy 'subtree split --prefix dist -b deploy'",
+  "__note": "only use the codes below accordingly to push new changes after staging and commits has been done to the remote-side of repo",
+  "__command1": "git subtree split --prefix dist -b deploy",
+  "__command2": "git push origin deploy:main --force",
   "name": "portfolio-website",
   "version": "1.0.0",
   "description": "Portfolio Website",
