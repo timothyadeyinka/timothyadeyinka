@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Timothy Kay" />
+    <meta name="nickname" content="CheswickTim" />
+    <meta name="romanization" content="Accurate A" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/icon.png" />
+    <title>Contact Me | Web Developer & Entrepreneur</title>
+  </head>
+
+  <body>
+    <!-- Progress Bar for Page's contents -->
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header-inner">
+      <div class="container main-nav">
+        <nav id="main-nav">
+          <span><a href="index.html" class="logo">TK</a></span>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html#about-b">Skills</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a class="current" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section A: Contact Form -->
+    <div id="contact-a" class="text-center py-3">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">Here is how you can reach me</p>
+        <form>
+          <!-- ERROR: There was a duplicate in the text-area name attribute,
+         There was an error in the [input:tel] element. Before, the input type
+         was number when its purpose was for mobile digits. Therefore the validator
+         flagged its autocomplete attribute value of tel invalid. However when the type 
+         became tel not number, the autocomplete attribute value of tel was deemed valid.
+         
+         Here is the question that fixed it using copilot...........
+         
+         For my autocomplete attribute, the tel value is flagged as not allowed in validation, how can I fix this?
+         -->
+          <div class="text-fields">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="text-input name-input"
+              autocomplete="given-name"
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              class="text-input subject-input"
+              autocomplete="organization-title"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              class="text-input email-input"
+              autocomplete="email"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter Your Phone Number"
+              class="text-input phone-input"
+              autocomplete="tel"
+            />
+            <textarea
+              name="message"
+              placeholder="Enter Message..."
+              class="text-input message-input"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-secondary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Section B: Contact Info -->
+    <div id="contact-b" class="py-3 bg-dark">
+      <div class="container">
+        <div class="contact-info">
+          <div>
+            <i class="fas fa-envelope fa-2x"></i>
+            <h3>Email</h3>
+            <p>timessence.c@outlook.com</p>
+          </div>
+          <div>
+            <i class="fas fa-phone fa-2x"></i>
+            <h3>Phone</h3>
+            <p>(+234) 8164 589298</p>
+          </div>
+          <div>
+            <i class="fas fa-address-book fa-2x"></i>
+            <h3>Address</h3>
+            <p>Lane D2 - New Era Estate, Abeokuta NG</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section C: Tagline -->
+    <div id="contact-c" class="bg-main py-4">
+      <div class="container">
+        <!-- Make this whole container an alpha element to call me. -->
+        <h1>Let's Start Your Next Project</h1>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top"></div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+    <!-- Footer -->
+    <footer id="main-footer"></footer>
+
+    <script src="js/footer.js"></script>
+    <script src="js/top_anchor.js"></script>
+    <script src="js/progress_bar.js"></script>
+    <script src="js/ux.js"></script>
+  </body>
+</html>
+
+<!-- Validated -->

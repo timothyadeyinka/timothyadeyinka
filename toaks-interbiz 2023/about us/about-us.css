@@ -1,0 +1,86 @@
+div.wrapper div.intro {
+  background-color: black; 
+  background-image: url("../images/about/intro.jpeg");
+  background-position: right center;
+  background-repeat: no-repeat ; 
+  height: 94px; 
+  color: white; 
+}
+div.wrapper div.intro p {
+  padding: 47px; 
+}
+div.begin-content div#toaks-logo {
+  text-align: center; 
+  margin: 40px 0; 
+}
+div.begin-content p {
+  text-align: left; 
+  line-height: 3em; 
+  opacity: .8; 
+  padding: 10px; 
+}
+div.begin-content div.choose-us {
+  display: table; 
+  border-spacing: 10px; 
+  text-align: center; 
+  margin: 50px 10px; 
+}
+div.begin-content div.choose-us h2 {
+  display: table-caption; 
+  color: orangered; 
+  padding: 20px; 
+  font-weight: normal; 
+}
+div.begin-content div.choose-us div {
+  display: table-cell; 
+  width: 351px; 
+}
+div.begin-content div.choose-us div h3 {
+  margin-top: 10px; 
+}
+div.begin-content div.choose-us div span {
+  font-size: x-small; 
+  opacity: .6; 
+  margin: 0; 
+}
+div.begin-content section.button { 
+  text-align: center; 
+}
+div.begin-content section.button h3 {
+  margin: 20px 0; 
+  opacity: .8; 
+}
+div.begin-content section.button a {
+  display: inline-block; 
+  background-color: lightgray; 
+  text-decoration: none; 
+  color: black; 
+  padding: 5px; 
+  margin: 10px 5px; 
+}
+div.begin-content section.blog {
+  background-color: white; 
+  background-image: url("../images/household3.jpeg");
+  background-repeat: no-repeat; 
+  background-position: left center; 
+  background-size: cover; 
+  height: 100px; 
+  margin: 30px 0;
+  text-align: center; 
+}
+div.begin-content section.blog h3 {
+  color: white; 
+  margin: 10px 0; 
+  padding: 15px 0; 
+}
+div.begin-content section.blog a {
+  text-decoration: none; 
+  border: 1px solid white; 
+  color: white; 
+  margin: 10px 0; 
+  padding: 5px 30px; 
+}
+div.begin-content section.blog a:hover {
+  background-color: black; 
+  transition: .3s; 
+}

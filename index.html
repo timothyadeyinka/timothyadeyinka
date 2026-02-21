@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Timothy Kay" />
+    <meta name="nickname" content="CheswickTim" />
+    <meta name="romanization" content="Accurate A" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/icon.png" />
+    <title>Timothy Kay | Web Developer & Entrepreneur</title>
+  </head>
+
+  <body>
+    <!-- KYC -->
+    <div id="kyc-container">
+      <div class="kyc-content">
+        <h4>Please verify your identity to access the website</h4>
+        <div class="kyc-fields">
+          <form id="form">
+            <fieldset>
+              <legend>
+                &nbsp;&nbsp;Please Fill Out Your Details:&nbsp;&nbsp;
+              </legend>
+              <p class="small">
+                Please provide the necessary verification details to proceed.
+              </p>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                required
+                pattern="[A-Za-z\s]{3,50}"
+                title="Name should be 3-50 characters long and contain only letters and spaces."
+                placeholder="Your Name"
+              />
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                id="phone"
+                pattern="[0-9]{10,11}"
+                required
+                placeholder="############"
+              />
+              <label for="email">Email:</label>
+              <input type="email" id="email" />
+              <button type="submit" id="pass-kyc" disabled>Submit</button>
+              <p class="small">I am excited to share my portfolio with you.</p>
+            </fieldset>
+          </form>
+        </div>
+        <div class="kyc-actions">
+          <button type="reset" class="btn-main reset">Reset</button>
+          <button type="button" class="btn-main cancel-kyc">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Only show the 'Welcome To My Website' Tag when the user has successfully reached
+   the site. Make it appear as a ribbon in the middle center on wider screen for about 5s.
+   On mobile, remove. -->
+    <!-- <h2 class="sparkle-text">Welcome to My Website!</h2> -->
+    <!-- Welcome Message 3rd February, 2025 -->
+    <div id="welcome-message">
+      <h1 class="greeting"></h1>
+      <div id="portfolio-pitch">
+        <div class="start">
+          <h3>
+            Exciting Opportunity to Showcase My Web Development Skills and
+            Experience
+          </h3>
+          <p class="portfolio-pitch">
+            Dear <span class="recipient-name"></span>, <br /><br />
+            I hope this preface finds you well and I'm excited to share my
+            opportunity to present my portfolio as a potential candidate for a
+            web development position. I am a passionate and dedicated
+            professional with a strong background in front-end and back-end
+            development, as well as experience in user experience design and
+            project management.
+          </p>
+          <p class="portfolio-pitch">
+            My portfolio showcases my skills, experience, and passion for web
+            development. I have built several projects, including responsive
+            websites, single-page applications, and interactive web
+            applications, using modern technologies such as HTML5, CSS3,
+            JavaScript, and popular frameworks like React, Bootstrap, and
+            Laravel. I have also worked on various project management and
+            collaboration tools, such as Trello, Asana, Github and Jira.
+            <br /><br />
+            In my portfolio, you will find:
+          </p>
+          <ul>
+            <li>
+              A showcase of my completed projects, including code snippets,
+              screenshots, and a brief description of each project.
+            </li>
+            <li>
+              A detailed resume, including my technical skills, experience, and
+              relevant certifications.
+            </li>
+            <li>
+              Testimonials from satisfied clients or colleagues, which can help
+              build trust and credibility.
+            </li>
+            <li>
+              A blog section, where I can share articles, tutorials, or insights
+              related to my field of expertise.
+            </li>
+            <li>
+              A contact form, so you can reach out to me directly if you are
+              interested in discussing my qualifications further.
+            </li>
+          </ul>
+          <p class="portfolio-pitch">
+            I am confident that my portfolio demonstrates my ability to create
+            engaging, responsive, and accessible web experiences that meet the
+            needs of users. I am eager to discuss how I can contribute to your
+            team and help you build a strong and successful web development team
+            in your business. <br /><br />
+            Thank you for considering my application. I look forward to the
+            opportunity to discuss how I can contribute to your team and help
+            you build a successful web content.
+          </p>
+        </div>
+        <div class="end">
+          Best regards,
+          <ul>
+            <li>Timothy Akorede Adeyinka</li>
+            <li>08164589298</li>
+            <li>timessence.c@outlook.com</li>
+            <li>https://github.com/timoteaKay</li>
+            <li>https://x.com/timothy_korede</li>
+          </ul>
+          <br /><br />
+          <p class="signature">
+            <span class="signature-text">Timothy Akorede Adeyinka</span><br />
+            Web Developer & Entrepreneur
+          </p>
+        </div>
+        <a href="#wrapper" target="_self" id="goToMyWebsite" class="btn-main"
+          >Go To My Website</a
+        >
+      </div>
+
+      <div class="side-bar">
+        <h1>Digital Clock</h1>
+        <div class="clock"></div>
+      </div>
+    </div>
+
+    <!-- Progress Bar for Page's contents -->
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <div class="initials logo">TK</div>
+        <div class="loading-text">Loading</div>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <div class="progress-text">0%</div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top"></div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+    <div id="wrapper">
+      <!-- <P>good</P> -->
+    </div>
+
+    <script src="js/home.js"></script>
+    <script src="js/typing_effect.js"></script>
+    <script src="js/swap_effect.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/top_anchor.js"></script>
+    <script src="js/progress_bar.js"></script>
+    <script src="js/ux.js"></script>
+
+    <!-- Remember to keep the home.js file on the top, as it holds the major content that the rest compliments. -->
+  </body>
+</html>
+
+<!-- Validated -->

@@ -1,0 +1,316 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+body {
+  font-family: Arial, sans-serif; 
+  background-color: lavender; 
+  background-image: url("../images/dark-wood.jpg"); 
+  line-height: 1.5em; 
+  font-size: small; 
+}
+body div.wrapper {
+  width: 80%; 
+  background-color: white; 
+  margin: 30px auto; 
+}
+header {
+  background-color: black;
+  width: 100%; 
+  color: white; 
+  padding: 5px;  
+  position: sticky; 
+  top: 0;  
+  z-index: 2; 
+}
+header h2{
+  font-weight: normal; 
+  font-size: xx-small;  
+}
+header a {
+  text-decoration: none; 
+  color: inherit; 
+}
+header a.right {
+  float: right;   
+  display: flex; 
+  height: 10px; 
+  align-items: flex-end;  
+  margin: 0 2px 0 10px;
+}
+.side-bar {
+  position: fixed;  
+  right: 10%;
+  bottom: 20%; 
+  top: 90px;  
+  border: none;
+  overflow: hidden;  
+  z-index: 1; 
+}
+div.wrapper .full-bar {
+  position: fixed; 
+  top: 100;  
+  width: 80%;  
+  height: 54px; 
+  overflow: hidden; 
+  border: none;  
+  z-index: 1; 
+  opacity: .5; 
+}
+/* Start of content */ 
+div.begin-content {
+  background-color: white;
+}
+div.heading { 
+  height: 30px; 
+ }
+.heading > img { 
+  margin: 5px; 
+}
+.heading #Toaks {
+  animation-name: rotate; 
+  animation-duration: 0.7s; 
+  animation-direction: reverse; 
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+.heading a.three-bar {
+  display: inline-block; 
+  position: relative; 
+  left: 5%; 
+  margin-bottom: 10px;  
+}
+.heading a div {
+  background-color: orangered; 
+  height: 2px; 
+  width: 15px; 
+  margin: 2px;  
+}
+.heading a.drop-down-dots {
+  float: right; 
+  margin: 0 15px;
+  padding-top: 5px; 
+  color: white; 
+  text-decoration: none; 
+  font-size: large; 
+}
+.heading .search-icon {
+  float: right; 
+  margin-right: 10px;  
+  padding-top: 5px; 
+}
+div.intro {
+  background-color: black; 
+  background-image: url("../images/about/intro.jpeg"); 
+  background-position: center right; 
+  background-repeat: no-repeat; 
+  color: white; 
+  width: 100%; 
+  height: 94px;
+}
+div.intro p {
+  vertical-align: middle;
+  opacity: 1; 
+  padding: 40px; 
+}
+section {
+  margin: 20px; 
+  padding: 10px;
+}
+section h3 {
+  margin: 10px 0; 
+  font-size: small; 
+  opacity: 1;  
+}
+p, section.quality > div {
+  opacity: .5;
+  font-size: small; 
+}
+div ul {
+  list-style-position: inside;
+}
+section.midfooter {
+  background-color: orange; 
+  color: white; 
+  text-align: center; 
+  padding: 10px; 
+  font-size: large; 
+  font-weight: bold; 
+  margin: 0; 
+}
+section.midfooter div {
+  margin: 6px; 
+  letter-spacing: .2em; 
+}
+section.midfooter a {
+  background-color: white; 
+  color: black; 
+  font-size: x-small;
+  text-align: center; 
+  font-family: inherit; 
+  padding: 8px; 
+  border: none; 
+  text-decoration: none; 
+  letter-spacing: 0;  
+}
+section.midfooter a:hover {
+  background-color: black; 
+  color: white; 
+}
+section.midfooter a:active {
+  letter-spacing: .1em; 
+}
+article#footer {
+  background-color: black; 
+  color: white;  
+  display: table; 
+  width: 100%; 
+}
+article#footer div.row {
+  display: table-row; 
+}
+article#footer section.user-input, 
+article#footer section.products, 
+article#footer section.quick-links,
+article#footer section.services {
+  display: table-cell; 
+  margin: 0; 
+  padding: 0; 
+}
+article#footer section h3 {
+  margin: 5px 0; 
+  padding: 10px 0;
+}
+article#footer section a { 
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+  margin: 2px 0; 
+  font-weight: thin; 
+  width: 120px;
+  border: none; 
+}
+article#footer section a:hover {
+  color: orangered; 
+  transition: color .3s;
+}
+article#footer section.services div {
+  margin: 10px 0; 
+}
+article#footer section.services div a {
+  display: inline; 
+  margin-right: 12px; 
+}
+article#footer section input, 
+article#footer section textarea {
+  display: block; 
+  margin: 2px 0; 
+  padding: 5px 0;
+  border: none; 
+  border-bottom: 1px solid white; 
+  background-color: inherit; 
+}
+article#footer section.user-input .submit {
+  background-color: orangered; 
+  color: white; 
+  padding: 2px; 
+  text-align: center; 
+  font-size: small; 
+  margin: 10px 0; 
+  width: 80px; 
+  border: 2px solid orangered; 
+}
+article#footer section a.terms,
+div.begin-content marquee a.terms {
+  border: 2px solid orangered; 
+  text-align: center; 
+  padding: 2px; 
+  color: inherit; 
+  background-color: inherit; 
+  width: 80px;
+  margin: 10px 0; 
+  font-size: x-small; 
+  font-weight: bold;    
+}
+article#footer section.user-input .submit:hover, 
+article#footer section a.terms:hover {
+  background-color: inherit; 
+  color: inherit;
+  font-size: x-small; 
+  animation: termshover 3s ease-in 10s infinite alternate running;
+}
+@keyframes termshover {
+  from {
+    margin-left: 0%;
+    width: 25%; 
+  }
+  to {
+    margin-left: 50%; 
+    width: 25%; 
+  }
+}   article#footer section a.sale {
+  border: 2px solid orangered; 
+  text-align: center; 
+  padding: 2px; 
+  color: inherit;
+  background-color: inherit; 
+  width: 140px; 
+  margin: 10px 0; 
+  font-size: x-small; 
+  font-weight: bold; 
+  animation: sale 3s ease-in-out 60s infinite alternate running;
+} 
+@keyframes sale {
+  from {
+    margin-left: 0%;
+    width: 60%; 
+  }
+  to {
+    margin-left: 5%; 
+    width: 80%; 
+  }
+}
+article#footer section a.sale:hover {
+  background-color: inherit; 
+  color: inherit;
+  font-size: x-small; 
+  animation: salehover 3s ease-in 10s infinite alternate running; 
+}
+@keyframes salehover {
+  from {
+    margin-left: 0%;
+    width: 60%; 
+  }
+  to {
+    margin-left: 5%; 
+    width: 60%; 
+  }
+}
+article#footer section a.terms:active,
+article#footer section a.sale:active {
+  background-color: white; 
+  color: black; 
+  transition: background-color .3s; 
+  letter-spacing: none; 
+  font-size: normal; 
+}
+footer {
+  background-color: #333; 
+  color: white; 
+  font-size: x-small; 
+  text-align: center; 
+}
+footer a {
+  text-decoration: none; 
+  color: white;
+}
+footer a:hover {
+  text-shadow: 1px 1px 5px white; 
+}

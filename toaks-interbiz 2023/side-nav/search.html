@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="author" content="Timothy">
+    <title>Toaks Appliances</title>
+    <link href="../images/icon/exports.png" rel="icon">
+    <style>
+      * {
+        margin: 0;
+        padding: 0; 
+        box-sizing: 0; 
+      }
+      body {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        height: 50px; 
+        width: auto; 
+        background-color: white; 
+      }
+      div { 
+        background-color: white; 
+        padding: 8px; 
+      }
+      div input {
+        border: none; 
+        background-color: rgb(245, 245, 245); 
+        padding: 4px; 
+      }
+
+      div a {
+        vertical-align: middle; 
+        margin-left: 20px; 
+      }
+      div button {
+        margin: 0; 
+        border: none; 
+        background-color: white; 
+      }
+      button > img:hover {
+        opacity: .5; 
+        transition: transparent .3s; 
+        cursor: pointer; 
+      }
+      button > img:active {
+        width: 20px;
+        transition: scale .3s; 
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <input type="text" placeholder="Search..." name="search" size="40">
+      <a href=""><button type="submit"><img src="../images/icon/searchblack.png" height="15" width="15"></button></a>
+    </div>
+  </body>
+</html>

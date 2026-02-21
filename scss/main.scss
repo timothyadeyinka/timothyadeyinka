@@ -1,0 +1,901 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 800
+// Apply the unique class name to the desired elements
+// Importations
+@import "config";
+@import "utilities";
+@import "item_grid";
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+// General Styles
+
+// Base styles for the entire website
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Applies a smooth scrolling transition within its content
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: $white-light;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: black;
+}
+
+// If the class of dark-mode is added, do this...
+body.dark-mode {
+  background: $dark-color;
+  color: $white-light;
+
+  // #main-nav {
+  //   background: $light-color;
+  //   color: $dark-color;
+
+  //   a {
+  //     color: $dark-color;
+  //   }
+  // }
+
+  #header-home {
+    background: $image-shade, $bg-image no-repeat center right/cover;
+  }
+
+  .section-title {
+    color: $main-color;
+  }
+
+  .lead {
+    color: $white-light;
+  }
+
+  #home-c .swap .step,
+  #home-c .process .content,
+  #home-c > .swap .step > div.step-number {
+    box-shadow: $box-shadow-dark;
+  }
+
+  #home {
+    &-b {
+      .stats {
+        color: $white-light;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-family: "Raleway", serif;
+  font-style: normal;
+  margin: $rem 0 0;
+  color: $main-color;
+}
+
+img {
+  width: $cent;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+// KYC
+#kyc-container {
+  padding: 20px;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  & .kyc-fields {
+    & fieldset {
+      // border: none;
+      padding: 10px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      legend {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      p.small {
+        margin-bottom: 0;
+        font-size: x-small;
+      }
+
+      label {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+      }
+      input,
+      select,
+      textarea {
+        padding: 10px;
+        border: 1px solid $dark-color;
+        border-radius: 5px;
+        width: 65%;
+      }
+
+      // input[type=text] {
+      //   width: 50%;
+      // }
+    }
+  }
+  & .kyc-actions {
+    margin: 10px 0;
+    & button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      // background: $main-color;
+      color: $white-light;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+  }
+}
+// Welcome Message
+#welcome-message {
+  padding: 20px;
+  display: none;
+}
+
+// Wrapper
+#wrapper {
+  display: none;
+}
+
+// Header
+#header {
+  &-home {
+    background: $image-shade, $bg-image no-repeat center right/cover;
+    color: $white-light;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+
+      // Main Nav
+      #main-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: $rem 10px;
+        color: $white-light;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        position: relative;
+        top: 10px;
+
+        ul {
+          display: flex;
+        }
+
+        li {
+          padding: $rem 1.5rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: $white-light;
+          text-transform: uppercase;
+          border-bottom: 2px transparent solid;
+          padding-bottom: 0.5rem;
+          transition: border-color 0.5s;
+
+          &:hover {
+            border-bottom-color: $medium-color;
+          }
+
+          &.current {
+            border-bottom-color: $main-color;
+          }
+        }
+      }
+
+      // Header Content
+      .header-content {
+        text-align: center;
+        padding: 2rem 0;
+
+        & h1 > span {
+          text-transform: uppercase;
+          color: $main-color;
+        }
+
+        & > p.lead {
+          margin: $rem 0 0;
+          height: 120px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & p.socials {
+          padding: 0 auto;
+          margin: 0 0 $rem;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+
+          span {
+            padding: 5px;
+            a:hover,
+            i:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1em;
+    }
+  }
+
+  // Header inner
+  &-inner {
+    background: $image-shade, $bg-image no-repeat 50% 50% / cover;
+    height: auto;
+    border-bottom: 3px solid $main-color;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+
+      // Main Nav
+      #main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: $rem 10px;
+        color: $white-light;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+
+        // Logo
+        #logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $white-light;
+          text-transform: uppercase;
+          padding: $rem 0 0.5rem;
+        }
+
+        ul {
+          display: flex;
+        }
+
+        li {
+          padding: $rem 1.5rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: $white-light;
+          text-transform: uppercase;
+          border-bottom: 2px transparent solid;
+          padding-bottom: 0.5rem;
+          transition: border-color 0.5s;
+
+          &:hover {
+            border-bottom-color: $medium-color;
+          }
+
+          &.current {
+            border-bottom-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Home Section A
+#home {
+  &-a {
+    .retro > span.stars {
+      display: block;
+      animation: stars infinite 8s ease-out;
+      animation-timing-function: linear;
+      padding: 20px 0 0;
+      margin-bottom: 0;
+
+      @keyframes stars {
+        0% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+    .retro i {
+      font-size: 48px;
+      color: $main-color;
+      margin-bottom: 20px;
+      position: relative;
+      animation: rotate 2s infinite linear;
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      &:first-child {
+        animation: rotate 2s infinite alternate;
+      }
+      &:last-child {
+        animation: rotate 2s infinite alternate-reverse;
+      }
+    }
+    .mid-star {
+      position: fixed;
+      top: -20px;
+      transform: rotateX(150deg);
+    }
+    h2.section-title {
+      margin-top: -20px;
+    }
+    .specials {
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      // Make the repeat (2, 1fr) at tablet mode.
+      grid-template-columns: repeat(4, 1fr);
+      text-align: left;
+
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .fas {
+        font-size: 3rem;
+        color: $main-color;
+        transition: color 0.5s;
+        padding-bottom: 0.4rem;
+      }
+    }
+    .add-ons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: $light-color;
+    }
+    .add-ons > div.description {
+      color: $white-light;
+      padding: 10px 20px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    // Background-Images
+    & div.code {
+      background: $image-shade, url("../img/items/item10.jpg") $image-position;
+    }
+    & div.web {
+      background: $image-shade, url("../img/items/item2.png") $image-position;
+      // Make this code boxes hidden on mobile.
+    }
+    & div.API {
+      background: $image-shade, url("../img/items/item5.png") $image-position;
+      // Make this code boxes hidden on mobile.
+    }
+    & div.data {
+      background: $image-shade, url("../img/items/item11.jpg") $image-position;
+      // Make this code boxes hidden on mobile.
+    }
+
+    // Add specific heights to the p element that has typing effects
+    #code,
+    #web,
+    #API,
+    #data {
+      height: 50px;
+    }
+  }
+
+  // Home Section B
+  &-b {
+    & h2 {
+      margin: 10px 0;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .stats {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      width: 25%;
+      color: $dark-color;
+
+      & ul i {
+        color: $main-color;
+      }
+
+      li {
+        line-height: 1.5;
+
+        &.stats-title {
+          font-size: 1.5rem;
+        }
+
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: 700;
+          color: $main-color;
+        }
+      }
+
+      div {
+        padding: $rem 0;
+      }
+    }
+    .showcase {
+      width: 75%;
+
+      & > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        & .gap {
+          margin-right: 20px;
+        }
+
+        & div.images > span,
+        & div.images2 > span {
+          display: block;
+          background: $main-color;
+          height: 200px;
+          width: 100%;
+          padding: 20px;
+          margin: 20px 0;
+        }
+
+        & div.images span:first-child {
+          background: url("../img/items/item12.jpg") $image-position;
+        }
+        & div.images span:nth-child(2) {
+          background: url("../img/items/item13.jpg") $image-position;
+        }
+        & div.images span:last-child {
+          background: url("../img/items/item14.jpg") $image-position;
+        }
+
+        // Second Section
+        & div.images2 span:first-child {
+          background: url("../img/items/item16.jpg") $image-position;
+        }
+        & div.images2 span:nth-child(2) {
+          background: url("../img/items/item17.jpg") $image-position;
+        }
+        & div.images2 span:last-child {
+          background: url("../img/items/item18.jpg") $image-position;
+        }
+      }
+    }
+  }
+
+  // Home Section C
+  &-c {
+    & .container > div.expository {
+      text-align: left;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    & .swap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+
+      // Creative process
+      & .process-step {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        & .step {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid $main-color;
+          position: relative;
+          background: $main-color;
+          color: $white-light;
+          cursor: pointer;
+          box-shadow: $box-shadow;
+          transition: all 1s ease-in-out;
+          border-radius: 5px;
+          font-weight: bold;
+
+          &:hover {
+            background: $white-light;
+            border: 2px solid $main-color;
+            color: $main-color;
+
+            .step-number {
+              background: $main-color;
+              width: 90px;
+              height: 90px;
+              line-height: 50px;
+              color: $white-light;
+              font-size: large;
+            }
+            // for the hover state
+          }
+
+          & div.step-number {
+            position: absolute;
+            top: -25px;
+            right: 25%;
+            border-radius: 50%;
+            padding: $rem 20px;
+            background: $white-light;
+            color: $main-color;
+            border: 2px solid $main-color;
+            z-index: 1;
+            box-shadow: $box-shadow;
+            font-size: small;
+            transition: all 1s;
+          }
+        }
+      }
+      // Swap effect is used here
+      & .process {
+        height: auto;
+
+        .content.active {
+          display: block;
+          opacity: 1;
+        }
+
+        .content h2 {
+          color: #333;
+          margin-bottom: 10px;
+        }
+
+        .content p {
+          color: #666;
+          margin-bottom: 20px;
+        }
+
+        .content i {
+          font-size: 48px;
+          color: #007bff;
+        }
+
+        /* Custom animations for each content */
+        .content1.active {
+          animation: slideInLeft 0.5s ease-out;
+        }
+        .content2.active {
+          animation: fadeIn 0.5s ease-out;
+        }
+        .content3.active {
+          animation: slideInTop 0.5s ease-out;
+        }
+
+        @keyframes slideInLeft {
+          from {
+            transform: translateX(-50px);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInTop {
+          from {
+            transform: translateY(-50px);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    // & /* Accordion */
+    // .accordion {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   height: 30%;
+    //   margin: 30px 0 0;
+    //   padding: 20px;
+
+    //   .accordion-content {
+    //     display: none;
+    //     opacity: 0;
+    //     transition: opacity 5s ease-in-out;
+    //   }
+
+    //   .accordion-content.active {
+    //     opacity: 1;
+    //     display: block;
+    //   }
+
+    //   .accordion-button {
+    //     background-color: transparent;
+    //     border: none;
+    //     cursor: pointer;
+    //     padding: 10px;
+    //     width: 100%;
+    //     text-align: left;
+    //     font-size: 16px;
+    //   }
+
+    //   .accordion-button:hover {
+    //     background-color: $light-color;
+    //   }
+
+    //   .accordion-button::after {
+    //     content: "\002B";
+    //     font-weight: bold;
+    //     float: right;
+    //     margin-left: 5px;
+    //   }
+
+    //   .accordion-button.active::after {
+    //     content: "\2212";
+    //     font-weight: bold;
+    //   }
+    // }
+  }
+}
+
+// About Sections
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bio-image bio bio"
+        "aw1 aw2 aw3";
+      grid-gap: 1.2rem;
+    }
+
+    // Grid Areas
+    .bio-image {
+      grid-area: bio-image;
+    }
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+    }
+
+    .award-1 {
+      grid-area: aw1;
+    }
+    .award-2 {
+      grid-area: aw2;
+    }
+    .award-3 {
+      grid-area: aw3;
+    }
+    // Awards and certifications are used here
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
+    }
+  }
+
+  // About B
+  &-b {
+    h4 {
+      color: $white-light;
+      text-transform: capitalize;
+      font-weight: normal;
+    }
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      div {
+        height: 100%;
+        color: $white-light;
+        text-align: center;
+        background: $main-color;
+      }
+
+      .progress-bar {
+        height: 100%;
+        background: $main-color;
+        width: 0%;
+      }
+    }
+  }
+
+  // About C
+  // &-c {
+  //   .about-logos {
+  //     display: grid;
+  //     grid-template-columns: repeat(4, 1fr);
+  //     grid-gap: 2rem;
+
+  //     img {
+  //       width: 70%;
+  //     }
+  //   }
+  // }
+
+  // About D
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+
+      ul {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// Contact
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "phone subject"
+        "message message";
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      // Grid Areas
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    button[type="submit"] {
+      width: 25%;
+    }
+  }
+
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+  }
+
+  &-c {
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+    }
+  }
+}
+
+// Footer
+
+#main-footer {
+  background: $dark-color;
+  color: $white-light;
+  height: 3rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+
+    .social-media > a {
+      & .fab {
+        transition: background 0.5s;
+        margin-right: $rem;
+        padding: 0.5rem;
+        border-radius: 50%;
+        border: 2px solid $white-light;
+        font-size: 1.2rem;
+        text-align: center;
+        color: $white-light;
+        &:hover {
+          background: $main-color;
+        }
+      }
+    }
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+// Mobile Import for media queries
+@import "media";

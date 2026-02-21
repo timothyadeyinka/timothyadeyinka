@@ -1,0 +1,70 @@
+#navbar h2 {
+  float: none;
+  width: auto;
+  text-align: center;
+}
+
+#navbar ul {
+  float: none;
+  text-align: center;
+}
+
+#navbar ul li,
+#contact-info .box {
+  display: block;
+  float: none;
+  border-bottom: 1px dotted #444;
+}
+
+#showcase {
+  height: auto;
+}
+
+#home-info {
+  height: auto;
+}
+
+#home-info .info-img {
+  float: none;
+  width: auto;
+  height: 40vh;
+  border-radius: initial;
+}
+
+#home-info .info-content {
+  float: none;
+  width: auto;
+  height: auto;
+  position: static;
+  padding: 50px 20px;
+}
+
+#features {
+  height: auto;
+}
+
+.box {
+  height: auto;
+  float: none;
+  width: auto;
+}
+
+#testimonials {
+  height: auto;
+}
+
+.testimony img,
+.reviews img {
+  float: none;
+  margin-bottom: 10px;
+}
+
+#about-info .info-left,
+#about-info .info-right {
+  width: auto;
+  float: none;
+}
+
+#about-info .info-right {
+  margin-top: 50px;
+}

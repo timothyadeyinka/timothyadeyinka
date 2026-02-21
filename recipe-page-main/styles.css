@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+  background: var(--rose-50);
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-optical-sizing: auto;
+  color: var(--stone-600);
+}
+
+h1 {
+  color: var(--stone-900);
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-optical-sizing: auto;
+}
+
+div.prep-time h3,
+div.prep-time ul li::marker {
+  color: var(--rose-800);
+}
+
+div.prep-time {
+  background: var(--stone-100);
+  padding: 10%;
+  border-radius: 5px 5px;
+  margin: 20px 0;
+}
+
+h2,
+ol li::marker,
+ul li::marker,
+table td:last-child {
+  color: var(--brown-800);
+}
+
+p,
+ul,
+ol {
+  margin: 10px 0;
+}
+
+ul,
+ol {
+  /* list-style-type: circle; */
+  line-height: 1.5em;
+  margin-left: 25px;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+}
+
+table tr td {
+  padding: 10px;
+  border-bottom: 1px solid var(--stone-150);
+}
+
+table tr:last-child td {
+  border: none;
+}
+
+table td:last-child {
+  font-weight: bold;
+}
+
+@media (min-width: 375px) {
+  header.hero {
+    background: url("assets/images/image-omelette.jpeg") no-repeat center/cover;
+    width: 100%;
+    height: 25vh;
+  }
+
+  div.wrapper {
+    padding: 0 10%;
+    margin: 10% 0;
+    max-width: 1020px;
+  }
+
+  div.prep-time ul {
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--stone-100);
+    font-size: 12px;
+  }
+
+  div.desktop {
+    margin: 5% 0;
+    width: 35vw;
+    border-radius: 5px 5px;
+    background: var(--rose-50);
+  }
+
+  header.hero {
+    height: 30vh;
+    border-radius: 5px 5px;
+  }
+
+  div.desktop-cheat {
+    padding: 4.5%;
+  }
+
+  div.wrapper {
+    margin: 2% 0 !important;
+    padding: 0 4.5%;
+  }
+}
+
+div.attribution {
+  background: var(--brown-800);
+  padding: 10px;
+  color: var(--rose-50);
+}
+
+div.attribution a {
+  text-decoration: none;
+  color: inherit;
+}

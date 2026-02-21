@@ -1,0 +1,84 @@
+@media (min-width: 1269px) {
+
+  #features {
+    height: 450px;
+  }
+}
+
+@media (max-width: 1268px) {
+
+  #home-info,
+  #features {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1012px) {
+
+  #home-info,
+  #features {
+    height: 550px;
+  }
+}
+
+@media (max-width: 965px) {
+
+  #home-info,
+  #features {
+    height: 600px;
+  }
+}
+
+@media (max-width: 883px) {
+
+  #home-info,
+  #features {
+    height: 650px;
+  }
+}
+
+@media (max-width: 809px) {
+
+  #home-info,
+  #features {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #navbar .container {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: fixed;
+    top: 3%;
+    right: 10%;
+  }
+
+  .bar {
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    margin: 2px 0;
+    transition: 0.4s;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 10px;
+  }
+
+}

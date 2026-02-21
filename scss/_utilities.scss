@@ -1,0 +1,439 @@
+// Preloader
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  & .preloader-content {
+    text-align: center;
+
+    .initials {
+      font-size: 48px;
+      font-weight: bold;
+      color: $main-color;
+      margin-bottom: 20px;
+    }
+
+    .loading-text {
+      font-size: 18px;
+      color: $dark-color;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      width: 200px;
+      height: 4px;
+      background-color: $dark-color;
+      margin: 10px auto;
+    }
+
+    .progress {
+      width: 0;
+      height: 100%;
+      background-color: $main-color;
+      transition: width 0.5s ease;
+    }
+
+    .progress-text {
+      font-size: 14px;
+      color: $main-color;
+    }
+  }
+}
+
+.side-bar {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 200px;
+}
+.fade-out {
+  opacity: 0;
+  transition: all 3s ease-out;
+}
+
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.progress-bar {
+  height: 4px;
+  background: $main-color;
+  width: 0%;
+}
+
+.container {
+  margin: auto;
+  max-width: $website-width;
+  padding: 0 5.5rem;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: $box-shadow;
+  border-radius: 50%;
+  display: none;
+  z-index: 990;
+
+  & a {
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 15px;
+    display: block;
+    color: $main-color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $white-light;
+  }
+}
+.show {
+  display: block;
+}
+
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid $main-color;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 10000;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Translated X boxes
+.box {
+  transform: translateX(500%);
+  transition: transform 0.8s ease;
+}
+.box:nth-of-type(even) {
+  transform: translateX(-500%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+
+  &-main {
+    @extend %btn-shared;
+    color: $white-light;
+    background: $main-color;
+  }
+
+  &-secondary {
+    @extend %btn-shared;
+    color: $white-light;
+    background: $dark-color;
+  }
+
+  &-tertiary {
+    @extend %btn-shared;
+    color: $dark-color;
+    background: $white-light;
+  }
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background: lighten($main-color, 20%);
+}
+
+// Backgrounds
+.bg {
+  &-main {
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium {
+    background: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+.lead {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.socials a {
+  display: inline-block;
+  color: $white-light;
+  border-radius: 50%;
+  border-color: $white-light;
+  background: transparent;
+  padding: $rem;
+
+  & i {
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn:hover {
+  background: darken($main-color, 10%);
+}
+
+// Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+// Margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+.bottom-line {
+  border: 1px solid $main-color;
+  width: 3rem;
+  display: block;
+  margin: 0 auto $rem auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.content {
+  display: none;
+  text-align: center;
+  background-color: $white-light;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: $box-shadow;
+  transition: all 0.5s ease-in-out;
+  max-width: 100%;
+  height: 320px;
+}
+
+// Logo
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white-light;
+  text-transform: uppercase;
+  padding: $rem 0 0.5rem;
+  font-family: 'Russo One', sans-serif;
+  text-align: center;
+  animation: logoAnimation 2s infinite;
+  @keyframes logoAnimation {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+// Text Effects
+.sparkle-text {
+  animation: sparkle 2s infinite;
+  @keyframes sparkle {
+    0% {
+      filter: drop-shadow(0 0 5px $main-color);
+    }
+    50% {
+      filter: drop-shadow(0 0 10px $light-color);
+    }
+    100% {
+      filter: drop-shadow(0 0 5px $main-color);
+    }
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, $main-color, $white-light);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.wave-text {
+  animation: wave 2s infinite;
+
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+// Unused
+.parallax-text {
+  animation: parallax 1s infinite;
+
+  @keyframes parallax {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.swirl {
+  animation: swirl 5s infinite;
+
+  @keyframes swirl {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.shake-text {
+  animation: shake 1s infinite;
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+  }
+}
+
+.wiggle {
+  animation: wiggle 1s infinite;
+
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-5px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    75% {
+      transform: translateY(-5px);
+    }
+  }
+}

@@ -1,0 +1,73 @@
+div.wrapper div.intro {
+  background-color: #666; 
+  background-image: url("../images/contact/introsprite.png");
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 275px; 
+}
+div.wrapper div.intro p {
+  font-size: large; 
+  padding: 137.5px 40px; 
+}
+div.begin-content article section h3 {
+  color: orangered; 
+  text-align: center;
+  font-weight: normal; 
+  letter-spacing: .1em;  
+  margin: 20px; 
+  font-size: x-large; 
+}
+div.begin-content article section p {
+  text-align: justify; 
+  color: black; 
+  opacity: .5; 
+  font-size: small;
+  line-height: 1em;  
+}
+div.begin-content div.contacts {
+  display: table; 
+  width: 100%; 
+}
+div.begin-content div.enquiries, 
+div.begin-content div.services, 
+div.begin-content div.follow-us {
+  display: table-cell; 
+  text-align: center;  
+}
+div.begin-content div.contacts a {
+  text-decoration: none; 
+  color: inherit; 
+  font-weight: bold;
+  text-align: center; 
+}
+div.begin-content div a:visited {
+  color: gray; 
+}
+div.begin-content div a:hover {
+  color: orangered;
+}
+div.begin-content div img:hover {
+  opacity: .8;
+  transition: .3s; 
+}
+div.begin-content div.follow-us a img {
+  margin: 0 5px; 
+}
+div.begin-content div.border {
+  text-align: center; 
+  margin: 30px 0; 
+}
+div.begin-content div.border a {
+  border: 2px solid orangered; 
+  padding: 8px; 
+  text-align: center;
+  text-decoration: none; 
+  opacity: .8;  
+  margin: 20px 10px; 
+  display: inline-block; 
+}
+div.begin-content div.border a:hover {
+  background-color: black; 
+  color: white; 
+  transition: .3s; 
+}

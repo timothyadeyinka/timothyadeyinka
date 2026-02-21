@@ -1,0 +1,495 @@
+/*******************************************
+* Timothy Kay 
+* _media.scss
+* *******************************************
+* This file contains the media queries responsible for the responsiveness of 
+  the website's layout and styling based on the screen size.
+*
+* Created: December 27, 2024
+* Last Modified: January 23, 2025
+* *******************************************
+
+/* The entire queries fucked me up because I didn't arrange the rules 
+  from lowest to highest / from the less important flowing down to the 
+  most important. This is the reason why it is call a Cascade . 
+  I have corrected it. */
+@media (max-height: 330px) {
+  #header-content {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 549px) {
+  .container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  #welcome-message {
+    & .side-bar {
+      display: none;
+    }
+  }
+  #header {
+    &-home {
+      .container {
+        padding: 0 3.5rem;
+
+        #main-nav {
+          flex-direction: column;
+          align-items: center;
+          top: 0;
+
+          li {
+            padding: $rem 0.5rem;
+          }
+        }
+      }
+    }
+
+    &-inner {
+      .container {
+        padding: 0 3.5rem;
+
+        // Main Nav
+        #main-nav {
+          flex-direction: column;
+          align-items: center;
+
+          li {
+            padding: $rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Stack Grid Columns
+  #home-a .specials,
+  #home-a .add-ons,
+  #home-b .stats,
+  #home-c .process,
+  #home-c .process-step,
+  #about-d .testimonials,
+  .items,
+  div.contact-info {
+    grid-template-columns: 1fr !important;
+  }
+
+  // Home
+  #home {
+    &-a {
+      & .specials i.fas,
+      & .specials h3 {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+      }
+      & .specials div {
+        border-bottom: 1px solid $light-color;
+        padding-bottom: $rem;
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-b {
+      & > div {
+        flex-direction: column-reverse;
+      }
+
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 0 $rem;
+        background: $image-shade, $bg-image no-repeat center left/cover;
+        color: $white-light;
+
+        & div {
+          padding: $rem 0;
+          width: 50%;
+        }
+      }
+
+      .showcase {
+        width: 100%;
+
+        & > div {
+          grid-template-columns: 1fr;
+
+          & div.images span:first-child {
+            background: url("../img/items/item15.jpg") $image-position;
+          }
+          & div.images span:nth-child(2) {
+            display: none;
+          }
+          & div.images span:last-child {
+            display: none;
+          }
+
+          // Second Section
+          & div.images2 span:first-child {
+            background: url("../img/items/item16.jpg") $image-position;
+          }
+          & div.images2 span:nth-child(2) {
+            display: none;
+          }
+          & div.images2 span:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+    &-c {
+      & .container > div.expository {
+        display: block;
+      }
+
+      & .swap {
+        display: block;
+        padding: 0 5px;
+        margin-top: 30px;
+
+        // Creative process
+        & .process-step {
+          & .step {
+            z-index: 989;
+
+            & .step-number {
+              box-shadow: $box-shadow;
+            }
+          }
+        }
+      }
+    }
+
+    // About
+    #about {
+      &-a {
+        .about-info {
+          grid-template-areas:
+            "bio-image"
+            "bio"
+            "aw1"
+            "aw2"
+            "aw3";
+        }
+      }
+
+      &-c {
+        display: none;
+      }
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    // Contact
+    #contact {
+      &-a {
+        .text-fields {
+          grid-template-areas:
+            "name"
+            "subject"
+            "email"
+            "phone"
+            "message";
+        }
+      }
+
+      &-b {
+        div {
+          margin-bottom: $rem;
+          padding-bottom: $rem;
+          border-bottom: 1px solid #555;
+
+          &:last-child {
+            border: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &-c {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          "bio-image"
+          "bio"
+          "aw1" "aw2" "aw3";
+      }
+    }
+
+    // &-c {
+    //   .about-logos {
+    //     grid-template-columns: repeat(2, 1fr);
+
+    //     img {
+    //       width: 100%;
+    //     }
+    //   }
+    // }
+    &-d {
+      & .testimonials {
+        & > div {
+          margin: 15px 0;
+          border-bottom: 1px solid $medium-color;
+          box-shadow: $box-shadow;
+        }
+      }
+    }
+  }
+
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name" "email"
+          "phone" "subject"
+          "message";
+
+        .text-input {
+          padding: 0.5rem;
+        }
+      }
+      button[type="submit"] {
+        width: 100%;
+      }
+    }
+
+    &-b {
+      .contact-info {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #555 solid;
+
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &-c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #work {
+    &-a {
+      & div.filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        & button {
+          width: 50%;
+        }
+      }
+    }
+  }
+  // Footer
+  #main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 6rem;
+
+      .social-media {
+        margin-top: $rem;
+      }
+    }
+  }
+}
+
+// Landscape
+@media (max-height: 580px) and (orientation: landscape) {
+  #header {
+    &-home {
+      height: auto;
+      border: none;
+      border-bottom: 3px solid $main-color;
+      .container {
+        #main-nav {
+          flex-direction: column;
+          align-items: center;
+          top: 0;
+        }
+      }
+
+      & .header-content {
+        display: none;
+      }
+    }
+  }
+}
+
+// Ipads
+@media (max-width: 880px) {
+  #home {
+    &-a {
+      .specials,
+      .add-ons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      & .specials i.fas,
+      & .specials h3 {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+      }
+    }
+
+    &-b {
+      & > div {
+        display: block;
+      }
+
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 0 $rem;
+        margin: 60px 0;
+      }
+
+      .showcase {
+        width: 100%;
+
+        & .work-sample div.images2 span:first-child {
+          background: url("../img/items/item14.jpg") $image-position;
+        }
+
+        & .work-sample div.images span:nth-child(2) {
+          background: url("../img/items/item16.jpg") $image-position;
+        }
+        & .work-sample div.images2 span:last-child,
+        & .work-sample div.images span:last-child {
+          display: none;
+        }
+      }
+    }
+
+    &-c {
+      & .swap {
+        display: flex;
+        flex-direction: column-reverse;
+
+        & .process-step {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 60px;
+
+          & .step {
+            height: 200px;
+            background: $white-light;
+            border: none;
+            border-bottom: 2px solid $main-color;
+            color: $main-color;
+            box-shadow: $box-shadow;
+
+            &:hover {
+              animation: wiggle 0.5s ease-in-out 5s infinite alternate;
+
+              .step-number {
+                width: initial;
+                height: initial;
+                line-height: initial;
+                color: $white-light;
+                font-size: initial;
+              }
+            }
+
+            & .step-number {
+              box-shadow: $box-shadow;
+            }
+          }
+
+          @keyframes steps {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(100%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #about {
+    &-d {
+      .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: $rem;
+      }
+    }
+  }
+}
+
+// Tablets & Portrait Orientation
+// Remove hero section by 90%, and let its inheritance flow down.
+
+@media (max-width: 1100px) {
+  #header-home {
+    .container {
+      height: auto;
+      & #main-nav {
+        top: 0;
+      }
+      .header-content {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  #header-home {
+    border: none;
+    .container {
+      & #main-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .header-content {
+        display: block;
+      }
+    }
+  }
+}
+// Next goal is to correct the swap section at home page DONE:
+// Specifically its margin-bottom to its relative other. DONE:

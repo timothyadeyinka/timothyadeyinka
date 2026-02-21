@@ -1,0 +1,650 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: lavender;
+  background-image: url("images/dark-wood.jpg");
+  line-height: 1.5em;
+  font-size: small;
+}
+
+body div.wrapper {
+  width: 80%;
+  margin: 30px auto;
+  background-color: white;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+header h2 {
+  font-weight: normal;
+  font-size: xx-small;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a.right {
+  float: right;
+  display: flex;
+  height: 10px;
+  align-items: flex-end;
+  margin: 0 2px 0 10px;
+}
+
+div.heading {
+  height: 30px;
+}
+
+.heading>img {
+  margin: 5px;
+}
+
+.heading #Toaks {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.heading a.three-bar {
+  display: inline-block;
+  position: relative;
+  left: 5%;
+  margin-bottom: 10px;
+}
+
+.heading a div {
+  background-color: orangered;
+  height: 2px;
+  width: 15px;
+  margin: 2px;
+}
+
+.heading a.drop-down-dots {
+  float: right;
+  margin: 0 15px;
+  padding-top: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+.heading .search-icon {
+  float: right;
+  margin-right: 10px;
+  padding-top: 5px;
+}
+
+.side-bar {
+  position: fixed;
+  right: 10%;
+  bottom: 20%;
+  top: 90px;
+  border: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+div.wrapper .full-bar {
+  position: fixed;
+  top: 100;
+  width: 80%;
+  height: 54px;
+  overflow: hidden;
+  border: none;
+  z-index: 1;
+  opacity: .5;
+}
+
+/* Start of content */
+div.begin-content {
+  background-color: white;
+}
+
+div.begin-content {
+  overflow: hidden;
+}
+
+div.begin-content div.framebackground {
+  animation-duration: 3.5s, 4s, 230ms;
+  animation-delay: 2s;
+  animation-name: image;
+  padding: 10px 0 10px 40px;
+  vertical-align: middle;
+  font-size: small;
+  background-image: url(images/kitchen-appliances/blenderspritetransparent.png);
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: orangered;
+  line-height: 2em;
+}
+
+@keyframes image {
+  from {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  25% {
+    width: 25%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 100%;
+  }
+}
+
+/* CSS Table Layout */
+div.begin-content section.category {
+  display: table;
+  width: 100%;
+  border-spacing: 20px 10px;
+  background-image: url("images/dark-wood.jpg");
+}
+
+div.begin-content section.category div.row {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+}
+
+div.begin-content section.category h3 {
+  text-align: center;
+  margin: 10px;
+  opacity: .5;
+  font-weight: bold;
+  display: table-caption;
+}
+
+/* End of Table CSS Layout */
+
+div.begin-content section.category a {
+  display: block;
+  background-color: orange;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+div.begin-content section.category a:hover {
+  background-color: black;
+  color: white;
+  transition: .3s;
+  letter-spacing: .1em;
+}
+
+div.begin-content div#graphics-representation {
+  margin: 0 auto;
+  background-image: url(images/household3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: lighten;
+}
+
+div.begin-content div#graphics-representation a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: x-small;
+  text-indent: none;
+  margin: 20px 40px;
+  padding-top: 75px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+  border: 2px solid orangered;
+  text-align: left;
+  animation: graphics-representation 3s ease-in-out 120s infinite;
+}
+
+@keyframes graphics-representation {
+  0% {
+    opacity: 1;
+    width: 200px;
+  }
+
+  50% {
+    opacity: .5;
+    width: 190px;
+  }
+
+  100% {
+    opacity: 1;
+    width: 200px;
+  }
+}
+
+div.begin-content div#graphics-representation a:hover {
+  opacity: .7;
+  transition: .3s;
+  animation: graphics-representation-hover 2s ease-in-out 30s infinite;
+}
+
+@keyframes graphics-representation-hover {
+  0% {
+    opacity: 1;
+    width: 200px;
+  }
+
+  50% {
+    opacity: .1;
+    width: 190px;
+  }
+}
+
+div.begin-content div#graphics-representation a span.right-arrow {
+  float: right;
+  background-color: white;
+  border-radius: 50%;
+  font-size: large;
+  color: black;
+}
+
+div.begin-content div#graphics-representation span.right-arrow:hover {
+  color: white;
+  background-color: orangered;
+  animation: right-arrow 1s ease-in-out 1s infinite;
+}
+
+@keyframes right-arrow {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    opacity: .2;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+div.begin-content div#graphics-representation span.right-arrow:active {
+  background-color: black;
+  color: orange;
+  transition: background-color .3s;
+}
+
+div.begin-content div#graphics-representation a.refrigeration {
+  background-color: white;
+  background-image: url("images/refrigerator/fridge (1).jpeg");
+}
+
+div.begin-content div#graphics-representation a.laundry {
+  background-color: white;
+  background-image: url("images/laundry/machine (1).jpeg");
+}
+
+div.begin-content div#graphics-representation a.kitchen-appliances {
+  background-color: white;
+  background-image: url("images/cooking & baking/smoothie (1).jpeg");
+}
+
+div.begin-content div#graphics-representation a.cooking-baking {
+  background-color: white;
+  background-image: url("images/cooking & baking/cooking (2).jpeg");
+}
+
+div.begin-content div#graphics-representation a.cooling {
+  background-color: white;
+  background-image: url("images/cooling/cooling (6).jpeg");
+}
+
+div.begin-content div#graphics-representation a.home-entertainment {
+  background-color: white;
+  background-image: url("images/home-entertainment/entertainment (1).jpeg");
+}
+
+div.begin-content div#graphics-representation a.carpets {
+  background-color: white;
+  background-image: url(images/carpets/carpet2.jpeg);
+  background-position: bottom center;
+}
+
+div.begin-content div#graphics-representation a.power {
+  background-color: white;
+  background-image: url(images/power/generator1.jpg);
+  background-position: bottom center;
+}
+
+#showcase {
+  padding: 10px;
+  margin: 0 0 10px 0;
+  display: table;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+#showcase h3 {
+  color: Orange;
+}
+
+#showcase div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#showcase div.left {
+  width: 22%;
+}
+
+section#showcase a.bordered {
+  text-decoration: none;
+  border: 2px solid orangered;
+  padding: 5px 10px;
+  color: inherit;
+  text-align: center;
+  margin-right: 20px;
+  width: 20%;
+}
+
+section#showcase a.bordered span:hover {
+  opacity: .3;
+  letter-spacing: .2px;
+  transition: .3s;
+}
+
+#showcase .bordered:active {
+  background-color: black;
+  color: white;
+  transition: .3s;
+}
+
+section.subscribe {
+  color: white;
+  background-color: black;
+  padding: 5px 0 0 0;
+  background-image: url("images/about/intro.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  animation: 3s 2s slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+section.subscribe h3 {
+  font-weight: normal;
+  padding: 10px 0;
+}
+
+section.subscribe h3 span {
+  font-weight: bold;
+}
+
+section.subscribe div.input input.textarea {
+  padding: 6px 0;
+  background-color: inherit;
+  text-align: left;
+  border: 1px solid white;
+}
+
+section.subscribe div.input input.submit:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  text-shadow: 2px 3px 5px white;
+}
+
+section.subscribe div.input input {
+  background-color: orangered;
+  color: white;
+  padding: 8px;
+  border: none;
+}
+
+section.midfooter {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+section.midfooter div {
+  margin: 6px;
+  letter-spacing: .2em;
+}
+
+section.midfooter a {
+  background-color: white;
+  color: black;
+  font-size: x-small;
+  text-align: center;
+  font-family: inherit;
+  padding: 8px;
+  border: none;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+section.midfooter a:hover {
+  background-color: black;
+  color: white;
+}
+
+section.midfooter a:active {
+  letter-spacing: .1em;
+}
+
+article#footer {
+  background-color: black;
+  color: white;
+  display: table;
+  width: 100%;
+}
+
+article#footer div.row {
+  display: table-row;
+}
+
+article#footer section.user-input,
+article#footer section.products,
+article#footer section.quick-links,
+article#footer section.services {
+  display: table-cell;
+}
+
+article#footer section h3 {
+  margin: 5px 0;
+  padding: 10px 0;
+}
+
+article#footer section a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin: 2px 0;
+  font-weight: thin;
+  width: 120px;
+  border: none;
+}
+
+article#footer section a:hover {
+  color: orangered;
+  transition: color .3s;
+}
+
+article#footer section.services div {
+  margin: 10px 0;
+}
+
+article#footer section.services div a {
+  display: inline;
+  margin-right: 12px;
+}
+
+article#footer section input,
+article#footer section textarea {
+  display: block;
+  margin: 2px 0;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: inherit;
+}
+
+article#footer section.user-input .submit {
+  background-color: orangered;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  font-size: small;
+  margin: 10px 0;
+  width: 80px;
+  border: 2px solid orangered;
+}
+
+article#footer section a.terms,
+div.begin-content marquee a.terms {
+  border: 2px solid orangered;
+  text-align: center;
+  padding: 2px;
+  color: inherit;
+  background-color: inherit;
+  width: 80px;
+  margin: 10px 0;
+  font-size: x-small;
+  font-weight: bold;
+}
+
+article#footer section.user-input .submit:hover,
+article#footer section a.terms:hover {
+  background-color: inherit;
+  color: inherit;
+  font-size: x-small;
+  animation: termshover 3s ease-in 10s infinite alternate running;
+}
+
+@keyframes termshover {
+  from {
+    margin-left: 0%;
+    width: 25%;
+  }
+
+  to {
+    margin-left: 50%;
+    width: 25%;
+  }
+}
+
+article#footer section a.sale {
+  border: 2px solid orangered;
+  text-align: center;
+  padding: 2px;
+  color: inherit;
+  background-color: inherit;
+  width: 140px;
+  margin: 10px 0;
+  font-size: x-small;
+  font-weight: bold;
+  animation: sale 3s ease-in-out 60s infinite alternate running;
+}
+
+@keyframes sale {
+  from {
+    margin-left: 0%;
+    width: 60%;
+  }
+
+  to {
+    margin-left: 5%;
+    width: 80%;
+  }
+}
+
+article#footer section a.sale:hover {
+  background-color: inherit;
+  color: inherit;
+  font-size: x-small;
+  animation: salehover 3s ease-in 10s infinite alternate running;
+}
+
+@keyframes salehover {
+  from {
+    margin-left: 0%;
+    width: 60%;
+  }
+
+  to {
+    margin-left: 5%;
+    width: 60%;
+  }
+}
+
+article#footer section a.terms:active,
+article#footer section a.sale:active {
+  background-color: white;
+  color: black;
+  transition: background-color .3s;
+  letter-spacing: none;
+  font-size: normal;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  font-size: x-small;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-shadow: 1px 1px 5px white;
+}
