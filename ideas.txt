@@ -1,0 +1,1 @@
+Project the hero section as a project showcase for viewers...i.e the hero section should contain a preview for projects done. The user can click on a mini box to check which one they want to view. Idea motivation came from a video from pinterest, it will be included in a folder called inspiration. For later use. 
