@@ -1,0 +1,444 @@
+/******************************
+* Timothy Adeyinka 
+* *******************************
+* This is the main style page for 
+* this project. 
+* *******************************
+* Project Name is DigitalBank Landing Page
+* *******************************
+* Initiated on 11th November, 2025. 
+* *******************************
+* Completed on ............. .
+*********************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p,
+a,
+li,
+span {
+  font-size: 0.75rem;
+  color: inherit;
+  line-height: 1.2rem;
+}
+
+h2,
+h3,
+h5,
+h6 {
+  font-weight: 400;
+  color: inherit;
+  line-height: 2rem;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.125rem;
+  background-color: hsl(220, 16%, 96%);
+  color: hsl(233, 8%, 62%);
+}
+
+.hamburger {
+  display: none;
+}
+
+.invite-btn {
+  border: 1px solid;
+  border-radius: 20px/20px;
+  background: linear-gradient(15deg, hsl(192, 69%, 51%), hsl(136, 64%, 51%));
+  padding: 0.625rem 1.25rem;
+  color: hsl(0, 100%, 100%);
+  transition: opacity 0.5s ease, background 1.2s ease-in-out 2s;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.invite-btn:hover {
+  opacity: 0.8;
+  background: linear-gradient(-345deg, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
+}
+
+.blog-link:hover {
+  color: hsl(136, 64%, 51%);
+}
+
+.base-line:hover {
+  border-bottom: thick solid hsl(136, 64%, 51%);
+}
+
+@media (max-width: 599px) {
+  .container {
+    min-width: 23.4375rem;
+    padding: 3.125rem 1.875rem;
+    width: 100%;
+  }
+}
+@media (max-width: 599px) and (min-width: 539px) and (max-width: 599px) {
+  .container {
+    padding: 3.125rem 3.5rem;
+  }
+}
+@media (max-width: 599px) {
+  /* Overlay to darken background when menu is open */
+  body.no-scroll::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 998;
+    pointer-events: auto;
+  }
+  /* Prevent background scroll when menu is open */
+  body.no-scroll {
+    overflow: hidden;
+  }
+  .nav-section {
+    padding: 0.9375rem 1.875rem;
+    /* when open (toggle via JS) */
+    /* stack links vertically */
+  }
+}
+@media (max-width: 599px) and (min-width: 539px) and (max-width: 599px) {
+  .nav-section {
+    padding: 0.9375rem 3.5rem;
+  }
+}
+@media (max-width: 599px) {
+  .nav-section .hamburger {
+    display: block;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+  }
+  .nav-section .nav-menu {
+    display: none;
+  }
+  .nav-section #primary-navigation.nav-menu {
+    position: fixed;
+    left: 1.25rem;
+    right: 1.25rem;
+    top: 5rem;
+    width: auto;
+    height: 40vh;
+    background: #fff;
+    padding: 2rem;
+    transform: translateX(200%);
+    transition: transform 300ms ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .nav-section #primary-navigation.nav-menu a {
+    font-size: 1.25rem;
+  }
+  .nav-section #primary-navigation.nav-menu.open {
+    transform: translateX(0);
+  }
+  .nav-section .nav-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .nav-section .nav-list a {
+    padding: 0.6rem 0;
+    display: inline-block;
+  }
+  .nav-section a.invite-btn {
+    display: none;
+  }
+  div.hero-section {
+    background: hsl(0, 0%, 98%) url("images/bg-intro-desktop.svg") no-repeat;
+    background-position: right -6.9rem top -6.4rem;
+    background-size: 34.6875rem 21.875rem;
+    padding: 3.125rem 1.25rem;
+  }
+}
+@media (max-width: 599px) and (min-width: 539px) {
+  div.hero-section {
+    padding: 3.125rem 3.5rem;
+  }
+}
+@media (max-width: 599px) {
+  div.hero-section > div {
+    text-align: center;
+    padding-top: 14.875rem;
+    width: 100%;
+  }
+  div.hero-section > div h2 {
+    padding: 0 3.5rem;
+  }
+}
+@media (max-width: 599px) and (min-width: 429px) {
+  div.hero-section > div h2 {
+    padding: 0 4rem;
+  }
+}
+@media (max-width: 599px) and (min-width: 539px) {
+  div.hero-section > div h2 {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 599px) {
+  div.info-section {
+    text-align: center;
+  }
+  div.info-section h3 {
+    padding: 0 3rem;
+  }
+  div.info-section .flex-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  div.blog-section {
+    text-align: center;
+    align-items: center;
+  }
+  div.blog-section .showcase {
+    flex-direction: column;
+  }
+  div.blog-section .showcase .showcase-item * {
+    text-align: left;
+  }
+  footer .flex-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.9375rem;
+  }
+  footer .flex-container .flex-item.flex-container {
+    gap: 0.625rem;
+  }
+  footer .flex-container li {
+    margin: 0.625rem 0;
+  }
+  footer .flex-container .flex-item:last-child .invite-btn {
+    margin: 1.25rem 0;
+  }
+  footer .flex-container .flex-item:last-child span {
+    display: block;
+    margin: 1.25rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3.125rem 1.25rem;
+  }
+  .nav-section {
+    padding: 1.25rem;
+  }
+  .hero-section {
+    background: hsl(0, 0%, 98%) url(images/bg-intro-desktop.svg) no-repeat right -20rem
+      bottom -5rem / cover;
+    padding: 6.25rem 1.25rem;
+  }
+  .hero-section div {
+    width: 30%;
+  }
+  .blog-section div.showcase {
+    gap: 1rem;
+  }
+  footer .flex-item.flex-container {
+    gap: 6.25rem;
+  }
+  footer .flex-item:last-child {
+    text-align: right;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3.125rem 1.875rem;
+  }
+  .nav-section {
+    padding: 1.25rem;
+  }
+  .hero-section {
+    background: hsl(0, 0%, 98%) url(images/bg-intro-desktop.svg) no-repeat right -20rem
+      bottom -5rem / cover;
+    padding: 6.25rem 1.25rem;
+  }
+  .hero-section div {
+    width: 25%;
+  }
+  .blog-section div.showcase {
+    gap: 1rem;
+  }
+  footer .flex-item.flex-container {
+    gap: 6.25rem;
+  }
+  footer .flex-item:last-child {
+    text-align: right;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3.125rem 7.5rem;
+  }
+  .nav-section {
+    padding: 0.9375rem 7.5rem;
+  }
+  .hero-section {
+    background: hsl(0, 0%, 98%) url("images/bg-intro-desktop.svg") no-repeat
+      right -12rem top -12rem / auto 165%;
+    padding: 6.25rem;
+  }
+  .hero-section div {
+    width: 20%;
+  }
+  .info-section .flex-container {
+    gap: 7.5rem;
+  }
+  .blog-section .showcase {
+    gap: 1rem;
+  }
+  footer .flex-item.flex-container {
+    gap: 6.25rem;
+  }
+  footer .flex-item:last-child {
+    text-align: right;
+  }
+}
+.nav-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background: hsl(0, 100%, 100%);
+}
+.nav-section ul {
+  display: flex;
+}
+.nav-section ul li a {
+  padding: 1.4375rem;
+}
+.nav-section .open {
+  display: block;
+}
+
+.hero-section div * {
+  margin: 1.25rem 0;
+}
+
+.info-section h3,
+.info-section div,
+.info-section h5 {
+  margin: 1.25rem 0;
+}
+.info-section div.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-section div.flex-container .flex-item > img {
+  width: 25%;
+}
+
+.blog-section {
+  background: hsl(0, 0%, 98%);
+}
+.blog-section h3,
+.blog-section div.showcase {
+  margin: 1.25rem 0;
+}
+.blog-section div.showcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.blog-section div.showcase img {
+  width: 100%;
+  height: 9.375rem;
+  border-radius: 2px 5px;
+}
+.blog-section div.showcase .info {
+  margin-left: 1.25rem;
+}
+.blog-section div.showcase .info * {
+  margin: 0.625rem 0;
+}
+.blog-section div.showcase .info .author {
+  font-size: x-small;
+}
+.blog-section div.showcase .info h6 {
+  line-height: initial;
+  color: hsl(233, 8%, 62%);
+  font-size: 0.875rem;
+}
+
+footer {
+  background: hsl(233, 26%, 24%);
+}
+footer .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .flex-container .flex-item.flex-container li {
+  margin: 1.25rem 0;
+}
+footer .flex-container .flex-item:first-child > img {
+  padding-left: 0.625rem;
+}
+footer .flex-container .flex-item:first-child > img,
+footer .flex-container .flex-item:first-child > div {
+  margin: 1.25rem 0;
+}
+footer .flex-container .flex-item:first-child > div.socials a {
+  padding: 0 0.3125rem;
+}
+footer .flex-container .flex-item:first-child > img,
+footer .flex-container .flex-item.flex-container > ul li:first-child {
+  margin-top: 0;
+}
+footer .flex-container .flex-item:first-child > div.socials,
+footer .flex-container .flex-item.flex-container > ul li:last-child,
+footer .flex-container .flex-item:last-child > span {
+  margin-bottom: 0;
+}
+footer .flex-container .flex-item:last-child * {
+  margin: 2.5rem 0;
+}
+footer .flex-container .flex-item:last-child span {
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */
+/* The pointer-events and the font-optical-sizing are considered invalid due to various reasons that includes pointer-events being originally from SVG (it is being used outside of an SVG context) and the validator profile is older, same thing applies to font-optical-sizing which is a newer CSS feature that controls the opsz axis on variable fonts */
+
+/* Validated on 13/11/25 8:42pm */

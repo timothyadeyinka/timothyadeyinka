@@ -1,0 +1,271 @@
+// Mobile
+@media (max-width: 599px) {
+  .container {
+    min-width: 23.4375rem;
+    padding: 3.125rem 1.875rem;
+    width: 100%;
+    @media (min-width: 539px) and (max-width: 599px) {
+      padding: 3.125rem 3.5rem;
+    }
+  }
+
+  /* Overlay to darken background when menu is open */
+  body.no-scroll::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 998;
+    pointer-events: auto;
+  }
+
+  /* Prevent background scroll when menu is open */
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .nav-section {
+    padding: 0.9375rem 1.875rem;
+    @media (min-width: 539px) and (max-width: 599px) {
+      padding: 0.9375rem 3.5rem;
+    }
+    .hamburger {
+      display: block;
+      background: transparent;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      padding: 0;
+      line-height: 0;
+    }
+    .nav-menu {
+      display: none;
+    }
+    #primary-navigation.nav-menu {
+      position: fixed;
+      left: 1.25rem;
+      right: 1.25rem;
+      top: 5rem;
+      width: auto;
+      height: 40vh;
+      background: #fff;
+      padding: 2rem;
+      transform: translateX(200%);
+      transition: transform 300ms ease;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+
+      & a {
+        font-size: 1.25rem;
+      }
+    }
+    /* when open (toggle via JS) */
+    #primary-navigation.nav-menu.open {
+      transform: translateX(0);
+    }
+
+    /* stack links vertically */
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      & a {
+        padding: 0.6rem 0;
+        display: inline-block;
+      }
+    }
+
+    a.invite-btn {
+      display: none;
+    }
+  }
+  div.hero-section {
+    background: hsl(0, 0%, 98%) url("images/bg-intro-desktop.svg") no-repeat;
+    background-position: right -6.9rem top -6.4rem;
+    background-size: 34.6875rem 21.875rem;
+    padding: 3.125rem 1.25rem;
+    @media (min-width: 539px) {
+      padding: 3.125rem 3.5rem;
+    }
+
+    & > div {
+      text-align: center;
+      padding-top: 14.875rem;
+      width: 100%;
+
+      & h2 {
+        padding: 0 3.5rem;
+        @media (min-width: 429px) {
+          padding: 0 4rem;
+        }
+        @media (min-width: 539px) {
+          padding: 0 5rem;
+        }
+      }
+    }
+  }
+  div.info-section {
+    text-align: center;
+
+    & h3 {
+      padding: 0 3rem;
+    }
+
+    & .flex-container {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  div.blog-section {
+    text-align: center;
+    align-items: center;
+
+    & .showcase {
+      flex-direction: column;
+
+      & .showcase-item * {
+        text-align: left;
+      }
+    }
+  }
+  footer {
+    & .flex-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.9375rem;
+
+      & .flex-item.flex-container {
+        gap: 0.625rem;
+      }
+      & li {
+        margin: 0.625rem 0;
+      }
+      & .flex-item:last-child {
+        & .invite-btn {
+          margin: 1.25rem 0;
+        }
+        & span {
+          display: block;
+          margin: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 600px) and (max-width: 899px) {
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3.125rem 1.25rem;
+  }
+  .nav-section {
+    padding: 1.25rem;
+  }
+  .hero-section {
+    background: hsl(0, 0%, 98%) url(images/bg-intro-desktop.svg) no-repeat right -20rem
+      bottom -5rem / cover;
+    padding: 6.25rem 1.25rem;
+
+    & div {
+      width: 30%;
+    }
+  }
+  .blog-section {
+    & div.showcase {
+      gap: 1rem;
+    }
+  }
+  footer {
+    .flex-item.flex-container {
+      gap: 6.25rem;
+    }
+    & .flex-item:last-child {
+      text-align: right;
+    }
+  }
+}
+
+// Small Desktop
+@media (min-width: 900px) and (max-width: 1199px) {
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3.125rem 1.875rem;
+  }
+  .nav-section {
+    padding: 1.25rem;
+  }
+  .hero-section {
+    background: hsl(0, 0%, 98%) url(images/bg-intro-desktop.svg) no-repeat right -20rem
+      bottom -5rem / cover;
+    padding: 6.25rem 1.25rem;
+
+    & div {
+      width: 25%;
+    }
+  }
+  .blog-section {
+    & div.showcase {
+      gap: 1rem;
+    }
+  }
+  footer {
+    .flex-item.flex-container {
+      gap: 6.25rem;
+    }
+    & .flex-item:last-child {
+      text-align: right;
+    }
+  }
+}
+
+// Large Desktop
+@media (min-width: 1200px) {
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3.125rem 7.5rem;
+  }
+  .nav-section {
+    padding: 0.9375rem 7.5rem;
+  }
+  .hero-section {
+    background: hsl(0, 0%, 98%) url("images/bg-intro-desktop.svg") no-repeat
+      right -12rem top -12rem / auto 165%;
+    padding: 6.25rem;
+
+    & div {
+      width: 20%;
+    }
+  }
+  .info-section {
+    & .flex-container {
+      gap: 7.5rem;
+    }
+  }
+  .blog-section {
+    .showcase {
+      gap: 1rem;
+    }
+  }
+  footer {
+    .flex-item.flex-container {
+      gap: 6.25rem;
+    }
+    & .flex-item:last-child {
+      text-align: right;
+    }
+  }
+}

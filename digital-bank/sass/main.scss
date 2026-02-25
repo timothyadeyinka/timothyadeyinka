@@ -1,0 +1,140 @@
+/******************************
+* Timothy Adeyinka 
+* *******************************
+* This is the main style page for 
+* this project. 
+* *******************************
+* Project Name is DigitalBank Landing Page
+* *******************************
+* Initiated on 11th November, 2025. 
+* *******************************
+* Completed on 13/11/2025 .
+*********************************/
+@use "utilities" as *;
+@use "responsive";
+
+.nav-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background: $white;
+
+  ul {
+    display: flex;
+
+    li a {
+      padding: 1.4375rem;
+    }
+  }
+  .open {
+    display: block;
+  }
+}
+
+.hero-section {
+  & div {
+    & * {
+      margin: $margin1;
+    }
+  }
+}
+
+.info-section {
+  & h3,
+  & div,
+  & h5 {
+    margin: $margin1;
+  }
+  & div.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .flex-item > img {
+      width: 25%;
+    }
+  }
+}
+
+.blog-section {
+  background: $gray-50;
+  & h3,
+  & div.showcase {
+    margin: $margin1;
+  }
+  & div.showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    & img {
+      width: 100%;
+      height: 9.375rem;
+      border-radius: 2px 5px;
+    }
+
+    & .info {
+      margin-left: 1.25rem;
+      & * {
+        margin: $margin2;
+      }
+      & .author {
+        font-size: x-small;
+      }
+      & h6 {
+        line-height: initial;
+        color: $gray-600;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+footer {
+  background: $blue;
+
+  & .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .flex-item.flex-container {
+      & li {
+        margin: 1.25rem 0;
+      }
+    }
+
+    & .flex-item:first-child {
+      & > img {
+        padding-left: 0.625rem;
+      }
+      & > img,
+      & > div {
+        margin: $margin1;
+      }
+
+      & > div.socials a {
+        padding: 0 0.3125rem;
+      }
+    }
+
+    & .flex-item:first-child > img,
+    & .flex-item.flex-container > ul li:first-child {
+      margin-top: 0;
+    }
+    & .flex-item:first-child > div.socials,
+    & .flex-item.flex-container > ul li:last-child,
+    & .flex-item:last-child > span {
+      margin-bottom: 0;
+    }
+    & .flex-item:last-child {
+      & * {
+        margin: 2.5rem 0;
+      }
+      & span {
+        display: block;
+      }
+    }
+  }
+}
