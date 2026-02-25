@@ -1,0 +1,323 @@
+/* *************************************
+* Timothy Adeyinka
+* 22nd February, 2026
+* **************************************
+* Bento Grid
+* styles.css
+************************************* */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: #dbdbdb;
+  font-size: 1rem;
+}
+
+main.grid {
+  display: grid;
+  grid-template-areas:
+    "post header header media"
+    "post accts date media"
+    "content accts date media"
+    "content accts2 followers followers";
+  grid-gap: 20px;
+  padding: 35px 20px;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+main.grid div.item {
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+main.grid div.item img {
+  width: 70%;
+}
+
+main.grid div.item * {
+  padding-bottom: 20px;
+}
+
+main.grid > div.item.header {
+  background-color: var(--purple-500);
+  color: var(--white);
+  text-align: center;
+  grid-area: header;
+  padding: 30px;
+  font-size: 1.5rem;
+}
+main.grid > div.item.header h1 {
+  padding-bottom: 0;
+}
+main.grid > div.item.header img {
+  margin: 20px 0 0;
+  width: 60%;
+  padding: 0;
+}
+
+main.grid > div.item.header span.coloredNum {
+  color: var(--yellow-500);
+}
+
+main.grid > div.item.header span.oblique,
+main.grid > div.item.post span.oblique {
+  font-style: oblique;
+}
+main.grid > div.item.header p small {
+  color: var(--purple-100);
+}
+
+main.grid > div.item.accts,
+main.grid > div.item.accts2 {
+  background: var(--white);
+  grid-area: accts;
+}
+
+main.grid > div.item.accts img {
+  width: 100%;
+}
+main.grid > div.item.accts {
+  font-size: 1rem;
+}
+
+main.grid > div.item.accts h2 {
+  padding-bottom: 0;
+}
+
+main.grid > div.item.accts2 {
+  grid-area: accts2;
+}
+
+main.grid > div.item.accts2 h2 {
+  font-size: 3rem;
+}
+
+main.grid > div.item.accts2 img {
+  padding-bottom: 0;
+}
+
+main.grid > div.item.date {
+  background: var(--yellow-500);
+  grid-area: date;
+  padding-right: 60px;
+  padding-bottom: 0;
+  font-size: 1rem;
+}
+
+main.grid > div.item.date img {
+  padding-bottom: 0px;
+  margin-bottom: -5px;
+}
+
+main.grid > div.item.media {
+  background: var(--purple-100);
+  text-align: center;
+  grid-area: media;
+  font-size: 1rem;
+}
+
+main.grid > div.item.media p {
+  font-size: 1.2rem;
+}
+
+main.grid > div.item.followers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--purple-500);
+  grid-area: followers;
+  color: var(--white);
+  text-align: center;
+}
+
+main.grid > div.item.followers p {
+  padding: 0 40px;
+  line-height: 1.8rem;
+  font-size: 2rem;
+}
+
+main.grid > div.item.post {
+  background: var(--yellow-100);
+  grid-area: post;
+  font-size: 1.2rem;
+}
+
+main.grid > div.item.post span.oblique.purple {
+  color: var(--purple-500);
+}
+
+main.grid > div.item.post img {
+  padding: 0;
+}
+
+main.grid > div.item.content {
+  background: var(--yellow-500);
+  grid-area: content;
+}
+
+main.grid > div.item.content img {
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  main.grid {
+    grid-template-areas:
+      "header"
+      "accts"
+      "date"
+      "media"
+      "followers"
+      "accts2"
+      "post"
+      "content";
+  }
+}
+
+@media (min-width: 701px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    @media (max-height: 800px) {
+      display: block;
+    }
+  }
+  main.grid {
+    padding: 4rem;
+    @media (max-height: 800px) {
+      margin: 0 auto;
+    }
+    @media (min-width: 1020px) {
+      width: 80% !important;
+    }
+    @media (min-width: 760px) {
+      padding: 1rem;
+      width: 100%;
+    }
+  }
+
+  main.grid div.item img {
+    width: 100%;
+  }
+
+  main.grid div.item.header h1 {
+    line-height: 2.7rem;
+    letter-spacing: -2px;
+  }
+  main.grid div.item.header img {
+    width: 35%;
+    margin-bottom: -10px;
+  }
+  main.grid div.item.header p {
+    padding-bottom: 0;
+  }
+  main.grid div.item.header p small {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  main.grid div.item.media {
+    text-align: left;
+    padding-top: 30px;
+  }
+
+  main.grid div.item.accts {
+    overflow: hidden;
+  }
+  main.grid div.item.accts img {
+    width: 155%;
+  }
+
+  main.grid div.item.date h2 {
+    padding-right: 60px;
+  }
+  main.grid div.item.date {
+    padding-right: 20px;
+  }
+  main.grid div.item.date img {
+    margin-bottom: -90px;
+  }
+
+  main.grid div.item.accts2 p {
+    font-size: 1rem;
+  }
+
+  main.grid div.item.post {
+    padding-top: 30px;
+  }
+
+  main.grid div.item.media {
+    padding: 30px 0 30px 20px;
+  }
+  main.grid div.item.media h2,
+  main.grid div.item.media p {
+    padding-right: 20px;
+  }
+  main.grid div.item.media p {
+    padding-bottom: 0;
+    font-size: 0.9rem;
+  }
+  main.grid div.item div.image-overflow {
+    overflow: hidden;
+  }
+  main.grid div.item.media img {
+    width: 165%;
+    padding-bottom: 0;
+  }
+
+  main.grid div.item.followers {
+    flex-direction: row;
+    font-size: 1rem;
+    padding: 0 20px;
+    position: relative;
+  }
+  main.grid div.item.followers img {
+    /* position: absolute; */
+    padding: 0 !important;
+    width: 50%;
+  }
+  main.grid div.item.followers p {
+    text-align: left;
+    padding: 0 0 0 10px !important;
+    font-size: 1.8rem;
+  }
+
+  main.grid div.item.accts2 h2 {
+    padding-bottom: 0;
+  }
+
+  main.grid div.item.content {
+    font-size: 1rem;
+  }
+  main.grid div.item.content h2 {
+    padding-right: 20px;
+  }
+  main.grid div.item.content img {
+    position: relative;
+    bottom: -30px;
+  }
+}
