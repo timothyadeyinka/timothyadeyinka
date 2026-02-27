@@ -9,7 +9,7 @@
   "scripts": {
     "compile:sass": "sass scss/main.scss ../css/style.css -w"
   },
-  "author": "Accurate A",
+  "author": "Timothy Adeyinka",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.83.0"
